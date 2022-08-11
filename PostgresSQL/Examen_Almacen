@@ -1,0 +1,194 @@
+
+create table Productos
+(
+	Producto SERIAL primary key,
+	Nombre varchar(100),
+	Precio numeric(10,2)
+);
+
+create table Cajeros
+(
+	Cajero  SERIAL primary key,
+	NomApels varchar(255)
+);
+
+create table Maquinas_Registradoras
+(
+	Maquina SERIAL primary key,
+	Piso int
+);
+
+create table Venta 
+(
+	Cajero int,
+	Maquina int,
+	Producto int,
+	foreign key (Maquina) references Maquinas_Registradoras(Maquina),
+	foreign key (Producto) references Productos(Producto),
+	foreign key (Cajero) references Cajeros(Cajero)
+);
+
+select * from Productos;
+
+insert into Productos (Nombre,Precio) values('Soda','10');
+insert into Productos (Nombre,Precio) values('Silla Platico','180');
+insert into Productos (Nombre,Precio) values('Televisor 32 pulgadas','2800');
+insert into Productos (Nombre,Precio) values('VideoJuego','1000');
+insert into Productos (Nombre,Precio) values('Bolsa Frituras','40');
+insert into Productos (Nombre,Precio) values('Bocina','800');
+insert into Productos (Nombre,Precio) values('Desechable','250');
+insert into Productos (Nombre,Precio) values('Globos','70');
+insert into Productos (Nombre,Precio) values('Playera','170');
+insert into Productos (Nombre,Precio) values('Jeans','250');
+insert into Productos (Nombre,Precio) values('Tenis','1200');
+insert into Productos (Nombre,Precio) values('Chamarra','500');
+insert into Productos (Nombre,Precio) values('Pelota','60');
+insert into Productos (Nombre,Precio) values('Cigarros','45');
+insert into Productos (Nombre,Precio) values('Cerveza','40');
+insert into Productos (Nombre,Precio) values('Pastl','450');
+insert into Productos (Nombre,Precio) values('Mouse','150');
+
+select * from Cajeros;
+
+insert into Cajeros (NomApels) values('Edgar Aranda');
+insert into Cajeros (NomApels) values('Josue Aranda');
+insert into Cajeros (NomApels) values('Diego Melena');
+insert into Cajeros (NomApels) values('Andres Hernandez');
+insert into Cajeros (NomApels) values('Carlos Perez');
+insert into Cajeros (NomApels) values('Vania Salazar');
+insert into Cajeros (NomApels) values('Viviana Montiel');
+insert into Cajeros (NomApels) values('Misael Rojas');
+insert into Cajeros (NomApels) values('Armando Lopez');
+insert into Cajeros (NomApels) values('Miguel Sanchez');
+
+select * from Maquinas_Registradoras;
+
+insert into Maquinas_Registradoras (Piso) values('1');
+insert into Maquinas_Registradoras (Piso) values('1');
+insert into Maquinas_Registradoras (Piso) values('1');
+insert into Maquinas_Registradoras (Piso) values('2');
+insert into Maquinas_Registradoras (Piso) values('2');
+insert into Maquinas_Registradoras (Piso) values('2');
+insert into Maquinas_Registradoras (Piso) values('3');
+insert into Maquinas_Registradoras (Piso) values('3');
+insert into Maquinas_Registradoras (Piso) values('3');
+
+select * from Venta
+
+insert into Venta (Cajero, Maquina, Producto) values('1','1','2');
+insert into Venta (Cajero, Maquina, Producto) values('2','2','4');
+insert into Venta (Cajero, Maquina, Producto) values('3','3','6');
+insert into Venta (Cajero, Maquina, Producto) values('4','4','8');
+insert into Venta (Cajero, Maquina, Producto) values('5','5','10');
+insert into Venta (Cajero, Maquina, Producto) values('6','6','12');
+insert into Venta (Cajero, Maquina, Producto) values('7','7','14');
+insert into Venta (Cajero, Maquina, Producto) values('8','8','16');
+insert into Venta (Cajero, Maquina, Producto) values('9','9','18');
+insert into Venta (Cajero, Maquina, Producto) values('1','1','1');
+insert into Venta (Cajero, Maquina, Producto) values('2','2','3');
+insert into Venta (Cajero, Maquina, Producto) values('3','3','5');
+insert into Venta (Cajero, Maquina, Producto) values('4','4','7');
+insert into Venta (Cajero, Maquina, Producto) values('5','5','9');
+insert into Venta (Cajero, Maquina, Producto) values('6','6','11');
+insert into Venta (Cajero, Maquina, Producto) values('7','7','13');
+insert into Venta (Cajero, Maquina, Producto) values('8','8','15');
+insert into Venta (Cajero, Maquina, Producto) values('9','9','17');
+insert into Venta (Cajero, Maquina, Producto) values('1','1','4');
+insert into Venta (Cajero, Maquina, Producto) values('2','2','5');
+insert into Venta (Cajero, Maquina, Producto) values('3','3','15');
+insert into Venta (Cajero, Maquina, Producto) values('4','4','15');
+insert into Venta (Cajero, Maquina, Producto) values('5','5','10');
+insert into Venta (Cajero, Maquina, Producto) values('6','6','12');
+insert into Venta (Cajero, Maquina, Producto) values('7','7','8');
+insert into Venta (Cajero, Maquina, Producto) values('8','8','16');
+insert into Venta (Cajero, Maquina, Producto) values('9','9','9');
+insert into Venta (Cajero, Maquina, Producto) values('1','1','4');
+insert into Venta (Cajero, Maquina, Producto) values('2','2','4');
+insert into Venta (Cajero, Maquina, Producto) values('3','3','1');
+insert into Venta (Cajero, Maquina, Producto) values('4','4','2');
+insert into Venta (Cajero, Maquina, Producto) values('5','5','3');
+insert into Venta (Cajero, Maquina, Producto) values('6','6','4');
+insert into Venta (Cajero, Maquina, Producto) values('7','7','5');
+insert into Venta (Cajero, Maquina, Producto) values('8','8','6');
+insert into Venta (Cajero, Maquina, Producto) values('9','9','7');
+insert into Venta (Cajero, Maquina, Producto) values('1','1','8');
+insert into Venta (Cajero, Maquina, Producto) values('2','2','9');
+insert into Venta (Cajero, Maquina, Producto) values('3','3','10');
+insert into Venta (Cajero, Maquina, Producto) values('4','4','11');
+insert into Venta (Cajero, Maquina, Producto) values('5','5','12');
+insert into Venta (Cajero, Maquina, Producto) values('6','6','13');
+insert into Venta (Cajero, Maquina, Producto) values('7','7','14');
+insert into Venta (Cajero, Maquina, Producto) values('8','8','15');
+insert into Venta (Cajero, Maquina, Producto) values('9','9','16');
+insert into Venta (Cajero, Maquina, Producto) values('1','1','17');
+insert into Venta (Cajero, Maquina, Producto) values('2','2','18');
+insert into Venta (Cajero, Maquina, Producto) values('3','3','18');
+insert into Venta (Cajero, Maquina, Producto) values('4','4','17');
+insert into Venta (Cajero, Maquina, Producto) values('5','5','16');
+insert into Venta (Cajero, Maquina, Producto) values('6','6','15');
+insert into Venta (Cajero, Maquina, Producto) values('7','7','14');
+insert into Venta (Cajero, Maquina, Producto) values('8','8','13');
+insert into Venta (Cajero, Maquina, Producto) values('9','9','12');
+insert into Venta (Cajero, Maquina, Producto) values('1','1','11');
+insert into Venta (Cajero, Maquina, Producto) values('2','2','10');
+insert into Venta (Cajero, Maquina, Producto) values('3','3','9');
+insert into Venta (Cajero, Maquina, Producto) values('4','4','8');
+insert into Venta (Cajero, Maquina, Producto) values('5','5','7');
+insert into Venta (Cajero, Maquina, Producto) values('6','6','5');
+insert into Venta (Cajero, Maquina, Producto) values('7','7','6');
+insert into Venta (Cajero, Maquina, Producto) values('8','8','4');
+insert into Venta (Cajero, Maquina, Producto) values('9','9','3');
+insert into Venta (Cajero, Maquina, Producto) values('1','1','2');
+insert into Venta (Cajero, Maquina, Producto) values('2','2','1');
+insert into Venta (Cajero, Maquina, Producto) values('3','3','15');
+insert into Venta (Cajero, Maquina, Producto) values('4','4','5');
+insert into Venta (Cajero, Maquina, Producto) values('5','5','3');
+insert into Venta (Cajero, Maquina, Producto) values('6','6','11');
+insert into Venta (Cajero, Maquina, Producto) values('7','7','18');
+insert into Venta (Cajero, Maquina, Producto) values('8','8','16');
+insert into Venta (Cajero, Maquina, Producto) values('9','9','2');
+insert into Venta (Cajero, Maquina, Producto) values('1','1','6');
+insert into Venta (Cajero, Maquina, Producto) values('2','2','7');
+insert into Venta (Cajero, Maquina, Producto) values('3','3','4');
+insert into Venta (Cajero, Maquina, Producto) values('4','4','8');
+insert into Venta (Cajero, Maquina, Producto) values('5','5','9');
+insert into Venta (Cajero, Maquina, Producto) values('6','6','4');
+insert into Venta (Cajero, Maquina, Producto) values('7','7','3');
+insert into Venta (Cajero, Maquina, Producto) values('8','8','13');
+insert into Venta (Cajero, Maquina, Producto) values('9','9','10');
+insert into Venta (Cajero, Maquina, Producto) values('1','1','7');
+insert into Venta (Cajero, Maquina, Producto) values('2','2','1');
+insert into Venta (Cajero, Maquina, Producto) values('3','3','5');
+insert into Venta (Cajero, Maquina, Producto) values('4','4','6');
+insert into Venta (Cajero, Maquina, Producto) values('5','5','9');
+insert into Venta (Cajero, Maquina, Producto) values('6','6','9');
+insert into Venta (Cajero, Maquina, Producto) values('7','7','4');
+insert into Venta (Cajero, Maquina, Producto) values('8','8','3');
+insert into Venta (Cajero, Maquina, Producto) values('9','9','7');
+
+/*NUMERO DE VENTAS DE CADA PRODUCTO*/
+SELECT  Productos.Nombre AS Nombre, Productos.Producto AS Productos FROM Venta INNER JOIN 
+Productos ON Venta.Producto = Productos.Producto GROUP BY Productos HAVING COUNT(*)>1;
+	 
+/*VENTAS TOTALES DE PRODUCTOS*/
+select Productos.Nombre AS NombreProducto From Venta INNER JOIN Productos 
+ON Venta.Producto = Productos.Producto Group by  Productos Having count(*)>1
+
+/*INFORME DE VENTA*/
+select Venta.Producto AS Producto, Productos.Nombre as NombreProducto, Productos.Precio as Precio, 
+Venta.Maquina AS Maquina, Cajeros.NomApels AS Cajero, Maquinas_Registradoras.Piso AS Piso 
+FROM Venta INNER JOIN Productos ON Venta.Producto = Productos.Producto INNER JOIN Cajeros ON 
+Venta.Cajero = Cajeros.Cajero INNER JOIN Maquinas_Registradoras ON Venta.Maquina = Maquinas_Registradoras.Maquina
+
+Select count(Venta.Producto)AS Total, Maquinas_Registradoras.Piso AS Piso 
+From Venta INNER JOIN Maquinas_Registradoras ON Venta.Maquina = Maquinas_Registradoras.Maquina 
+
+/*CODIGO Y NOMBRE CAJERO, IMPORTE DE SUS VENTAS*/
+select Venta.Cajero, Cajeros.NomApels AS Nombre, Productos.Precio AS Producto
+From Venta INNER JOIN Cajeros ON Venta.Cajero = Cajeros.Cajero INNER JOIN Productos 
+ON Venta.Producto = Productos.Producto
+
+/*VENTAS POR PISO*/
+select Producto, Maquinas_Registradoras.Piso from Venta INNER JOIN Maquinas_Registradoras 
+ON Venta.Maquina = Maquinas_Registradoras.Maquina 
+

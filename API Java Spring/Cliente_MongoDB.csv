@@ -1,0 +1,9 @@
+Apellidos,Cliente_ID,Contraseña,Correo_Electronico,ETA,Edad,Estatura,Fecha_Creacion,Fecha_Modificacion,GEB,IMC,Nombre,Nombre_Usuario,Peso,_id
+Aranda,1,edgar1234,eedzaha@gamil.com,,24,1.68,11/08/2022,11/08/2022,1614,23,Edgar,Edgarzaha,68,62f55a64c96d4d81fc964f62
+Aranda,2,joss154,jossah12@hotmail.com,,26,1.78,11/08/2022,11/08/2022,1896,22,Josue,JosueAH,70,62f55b77c96d4d81fc964f64
+Franco,3,Rafael12313,rafa154@hotmail.com,,46,1.72,11/08/2022,11/08/2022,1756,25,Rafael,Rafael,80,62f55ba7c96d4d81fc964f66
+Montiel,4,montiel32342,vmg1254@hotmail.com,,22,1.55,11/08/2022,11/08/2022,1402,23,Viviana,Viviana,58,62f55bd6c96d4d81fc964f68
+Aranda,5,Abi213,abigail1231@hotmail.com,,18,1.53,11/08/2022,11/08/2022,1402,24,Abigail,Abigail,53,62f55c45c96d4d81fc964f6a
+Herrera,6,Luis4564,luisao@hotmail.com,,39,1.78,11/08/2022,11/08/2022,1820,24,Luis,LuisAH,80,62f55c73c96d4d81fc964f6c
+Castro,7,ange32446,angel567@hotmail.com,,27,1.62,11/08/2022,11/08/2022,1672,25,Angel,Angel,71,62f55ca0c96d4d81fc964f6e
+Vega,8,guada0207,guadalupe0207@gmail.com,,45,1.65,11/08/2022,11/08/2022,1896,23,Guadalupe,Guadalupe,70,62f55d1dc96d4d81fc964f70
